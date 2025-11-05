@@ -1,5 +1,6 @@
 ﻿# Zadání projektu
 
+## Základ
 - Textová hra na hrdiny a jejich souboj v aréně - formát 1:1
 - Programátor definuje hrdiny a ti budou mezi sebou bojovat
 - Boj probíhá na kola, dokud jeden z oponentů nezemře
@@ -36,3 +37,14 @@
     - END - defense
     - INT - spells
     - CHA - ???
+
+## Rozšíření pro den otevřených dveří (21-22.11.)
+- Ovládání pro uživatele (hráče)
+  - výběr postavy
+  - rozdělení části statů uživatelem
+  - manuální ovládání boje - ke zvážení
+- Poskytování informací
+  - ke statům
+  - ke skillům/spelům
+  - co se v aréně děje
+  - jak "vypadá" soupeř (confused, shaken, tired, ...)

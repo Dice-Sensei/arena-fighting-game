@@ -22,7 +22,7 @@ class Hero:
     def is_dead(self):
         return self.health <= 0
 
-    def get_hurt(self, damage):
+    def take_damage(self, damage):
         self.health -= damage
         print(f"health after damage: {self.health}")
 

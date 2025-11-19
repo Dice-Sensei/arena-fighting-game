@@ -46,6 +46,8 @@
 
     @staticmethod
     def perform_one_sided_attack_and_check_for_death(attacker, defender):
+        print(f"Attacker is {attacker.name}, defender is {defender.name}")
+
         Arena.perform_one_sided_attack(attacker, defender)
         if defender.is_dead():
             print(f"{defender.name} is dead")
@@ -65,6 +67,8 @@
                 self.hero1, self.hero2
             ):
                 break
+
+            print()
 
             if Arena.perform_one_sided_attack_and_check_for_death(
                 self.hero2, self.hero1

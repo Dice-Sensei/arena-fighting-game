@@ -6,5 +6,5 @@ from hero.hero_roster import warrior_punchalot, archer_robin
 if __name__ == "__main__":
     arena = Arena()
     arena.register_heroes(warrior_punchalot, archer_robin)
-    arena.introduce_heroes()
+    arena.pre_fight_announcements()
     arena.facilitate_fight()

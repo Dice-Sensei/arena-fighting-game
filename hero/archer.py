@@ -15,4 +15,4 @@ class Archer(Hero):
 
             return self.stats.dex
         else:
-            return super().calculate_attack_damage()
+            return self.stats.str

@@ -12,8 +12,7 @@ class Hero:
         self.stats.print_values()
 
     def calculate_attack_damage(self):
-        print("calculating attack damage...from strength")
-        return self.stats.str
+        raise NotImplementedError
 
     def calculate_defense(self):
         print("calculating defense...")

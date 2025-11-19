@@ -1,10 +1,10 @@
 from arena import Arena
-from hero.hero_roster import warrior, archer
+from hero.hero_roster import warrior_punchalot, archer_robin
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == "__main__":
     arena = Arena()
-    arena.register_heroes(warrior, archer)
+    arena.register_heroes(warrior_punchalot, archer_robin)
     arena.introduce_heroes()
     arena.facilitate_fight()

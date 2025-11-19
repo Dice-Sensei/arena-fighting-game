@@ -1,4 +1,6 @@
-﻿from hero.hero import Hero, Mage, Archer
+﻿from hero.hero import Hero
+from hero.archer import Archer
+from hero.mage import Mage
 from stats import Stats
 
 # define heroes

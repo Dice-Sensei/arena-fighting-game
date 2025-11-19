@@ -25,26 +25,3 @@ class Hero:
     def take_damage(self, damage):
         self.health -= damage
         print(f"health after damage: {self.health}")
-
-
-class Mage(Hero):
-    def calculate_attack_damage(self):
-        print("calculating attack damage...from intelligence")
-        return self.stats.int
-
-
-class Archer(Hero):
-    def __init__(self, name, stats, backstory=""):
-        super().__init__(name, stats, backstory)
-        self.ammunition = 15
-
-    def calculate_attack_damage(self):
-
-        if self.ammunition > 0:
-            print("calculating attack damage...from dexterity")
-
-            self.ammunition -= 1
-
-            return self.stats.dex
-        else:
-            return super().calculate_attack_damage()

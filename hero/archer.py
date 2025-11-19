@@ -15,4 +15,7 @@ class Archer(Hero):
 
             return self.stats.dex
         else:
+            print("Out of ammo")
+            print("calculating attack damage...from strength")
+
             return self.stats.str

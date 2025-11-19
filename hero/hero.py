@@ -22,4 +22,4 @@ class Hero:
 
     def take_damage(self, damage):
         self.health -= damage
-        print(f"health after damage: {self.health}")
+        print(f"health after damage: {self.health:.2f}")

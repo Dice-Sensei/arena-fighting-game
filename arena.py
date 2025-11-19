@@ -1,4 +1,7 @@
-﻿class Arena:
+﻿from time import sleep
+
+
+class Arena:
     def __init__(self):
         self.hero2 = None
         self.hero1 = None
@@ -76,6 +79,9 @@
                 break
 
             fighting_round += 1
-            print()  # empty row after each fight
+
+            # fight round end
+            print()  # empty row for readability
+            sleep(0.8)
 
         print(f"Fight ended in {fighting_round} rounds!")

@@ -15,8 +15,7 @@ class Hero:
         raise NotImplementedError
 
     def calculate_defense(self):
-        print("calculating defense...")
-        return self.stats.end
+        raise NotImplementedError
 
     def is_dead(self):
         return self.health <= 0

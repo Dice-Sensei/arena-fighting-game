@@ -7,4 +7,7 @@ if __name__ == "__main__":
     arena = Arena()
     arena.register_heroes(warrior_punchalot, archer_robin)
     arena.pre_fight_announcements()
+
+    input("Pres Enter to start fight")
+
     arena.facilitate_fight()

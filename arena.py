@@ -46,6 +46,8 @@ class Arena:
         damage = attacker_damage - defender_defense
         if damage > 0:
             defender.take_damage(damage)
+        else:
+            print("no damage dealt")
 
     @staticmethod
     def perform_one_sided_attack_and_check_for_death(attacker, defender):

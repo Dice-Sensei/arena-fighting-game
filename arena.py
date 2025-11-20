@@ -43,6 +43,14 @@ class Arena:
         print("Fight will be in format 1 : 1!")
         print()
 
+    def prepare_fight(self):
+        if self.hero1 is None or self.hero2 is None:
+            raise ValueError("Heroes must be registered before starting the fight")
+
+        self.determine_fighting_order()
+
+        self.pre_fight_announcements()
+
     def pre_fight_announcements(self):
         self.introduce_arena()
         self.introduce_fight_format()
@@ -70,11 +78,6 @@ class Arena:
         return False
 
     def facilitate_fight(self):
-        if self.hero1 is None or self.hero2 is None:
-            raise ValueError("Heroes must be registered before starting the fight")
-
-        self.determine_fighting_order()
-
         fighting_round = 1
 
         while True:

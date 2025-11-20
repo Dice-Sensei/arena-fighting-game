@@ -3,12 +3,22 @@
 
 class Arena:
     def __init__(self):
-        self.hero2 = None
         self.hero1 = None
+        self.hero2 = None
+        self.fight_order_hero1 = None
+        self.fight_order_hero2 = None
 
     def register_heroes(self, hero1, hero2):
         self.hero1 = hero1
         self.hero2 = hero2
+
+    def determine_fighting_order(self):
+        if self.hero1.stats.cha >= self.hero2.stats.cha:
+            self.fight_order_hero1 = self.hero1
+            self.fight_order_hero2 = self.hero2
+        else:
+            self.fight_order_hero1 = self.hero2
+            self.fight_order_hero2 = self.hero1
 
     def introduce_heroes(self):
         print("In first corner is - ")
@@ -63,20 +73,22 @@ class Arena:
         if self.hero1 is None or self.hero2 is None:
             raise ValueError("Heroes must be registered before starting the fight")
 
+        self.determine_fighting_order()
+
         fighting_round = 1
 
         while True:
             print(f"Fighting round {fighting_round} starts")
 
             if Arena.perform_one_sided_attack_and_check_for_death(
-                self.hero1, self.hero2
+                self.fight_order_hero1, self.fight_order_hero2
             ):
                 break
 
             print()
 
             if Arena.perform_one_sided_attack_and_check_for_death(
-                self.hero2, self.hero1
+                self.fight_order_hero2, self.fight_order_hero1
             ):
                 break
 

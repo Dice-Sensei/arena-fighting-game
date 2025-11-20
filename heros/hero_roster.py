@@ -1,6 +1,6 @@
-﻿from hero.archer import Archer
-from hero.mage import Mage
-from hero.warrior import Warrior
+﻿from heros.archer import Archer
+from heros.mage import Mage
+from heros.warrior import Warrior
 from stats import Stats
 from input_handler import request_number_input
 

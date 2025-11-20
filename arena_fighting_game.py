@@ -1,5 +1,5 @@
 from arena import Arena
-from hero.hero_roster import select_fighters
+from heros.hero_roster import select_fighters
 
 
 # Press the green button in the gutter to run the script.

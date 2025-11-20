@@ -1,4 +1,4 @@
-﻿from hero.hero import Hero
+﻿from heros.hero import Hero
 
 
 class Warrior(Hero):

@@ -64,6 +64,7 @@ def select_opponent():
 
 def select_fighters():
     hero = select_hero()
+    print()
 
     while True:
         opponent = select_opponent()
@@ -74,4 +75,5 @@ def select_fighters():
 
         break
 
+    print()
     return hero, opponent

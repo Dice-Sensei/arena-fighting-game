@@ -43,6 +43,11 @@ class Arena:
         print("Fight will be in format 1 : 1!")
         print()
 
+    def introduce_hero_fight_order(self):
+        print(
+            f"First to attack will be {self.fight_order_hero1.name} as audience favorite!"
+        )
+
     def prepare_fight(self):
         if self.hero1 is None or self.hero2 is None:
             raise ValueError("Heroes must be registered before starting the fight")
@@ -55,6 +60,7 @@ class Arena:
         self.introduce_arena()
         self.introduce_fight_format()
         self.introduce_heroes()
+        self.introduce_hero_fight_order()
 
     @staticmethod
     def perform_one_sided_attack(attacker, defender):

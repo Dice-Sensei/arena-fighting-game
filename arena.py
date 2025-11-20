@@ -7,6 +7,7 @@ class Arena:
         self.hero2 = None
         self.fight_order_hero1 = None
         self.fight_order_hero2 = None
+        self.winner = None
 
     def register_heroes(self, hero1, hero2):
         self.hero1 = hero1
@@ -92,6 +93,7 @@ class Arena:
             if Arena.perform_one_sided_attack_and_check_for_death(
                 self.fight_order_hero1, self.fight_order_hero2
             ):
+                self.winner = self.fight_order_hero1
                 break
 
             print()
@@ -99,6 +101,7 @@ class Arena:
             if Arena.perform_one_sided_attack_and_check_for_death(
                 self.fight_order_hero2, self.fight_order_hero1
             ):
+                self.winner = self.fight_order_hero2
                 break
 
             fighting_round += 1
@@ -108,3 +111,4 @@ class Arena:
             sleep(0.8)
 
         print(f"Fight ended in {fighting_round} rounds!")
+        print(f"Winner is {self.winner.name}!!! Congratulation!")

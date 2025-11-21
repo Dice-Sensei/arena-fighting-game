@@ -11,13 +11,14 @@ class Archer(Hero):
             self.ammunition -= 1
             attack = 1.4 * self.stats.dex
 
+            print("still have ammo, using bow")
             print(f"calculating attack damage...from dexterity: {attack}")
 
             return attack
         else:
             attack = 1.0 * self.stats.str
 
-            print("I am out of ammo")
+            print("out of ammo, using dagger")
             print(f"calculating attack damage...from strength {attack}")
 
             return attack

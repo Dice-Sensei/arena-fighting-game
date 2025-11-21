@@ -11,6 +11,9 @@ class Hero:
         )
         self.stats.print_values()
 
+    def round_tick(self):
+        pass
+
     def calculate_attack_damage(self):
         raise NotImplementedError
 

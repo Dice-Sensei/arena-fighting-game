@@ -90,6 +90,9 @@ class Arena:
         while True:
             print(f"Fighting round {fighting_round} starts")
 
+            self.hero1.round_tick()
+            self.hero2.round_tick()
+
             if Arena.perform_one_sided_attack_and_check_for_death(
                 self.fight_order_hero1, self.fight_order_hero2
             ):

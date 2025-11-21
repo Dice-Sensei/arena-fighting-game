@@ -1,6 +1,7 @@
 ﻿from heros.archer import Archer
 from heros.mage import Mage
 from heros.warrior import Warrior
+from heros.priest import Priest
 from stats import Stats
 from input_handler import request_number_input
 
@@ -23,8 +24,14 @@ archer_robin = Archer(
     "Taking from rich and giving everything to himself.",
 )
 
+priest_holy = Priest(
+    "Ms. Holy",
+    Stats(2, 4, 3, 9, 9),
+    "Most holy and awe inspiring person in whole Holywood",
+)
 
-all_heroes = [warrior_punchalot, mage_merlin, archer_robin]
+
+all_heroes = [warrior_punchalot, mage_merlin, archer_robin, priest_holy]
 
 
 def introduce_all_heroes():

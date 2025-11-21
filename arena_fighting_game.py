@@ -12,6 +12,6 @@ if __name__ == "__main__":
     arena.register_heroes(heroes[0], heroes[1])
     arena.prepare_fight()
 
-    input("Pres Enter to start fight")
+    input("Pres Enter to start fight ")
 
     arena.facilitate_fight()

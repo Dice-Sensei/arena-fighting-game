@@ -4,6 +4,7 @@ class Hero:
         self.stats = stats
         self.backstory = backstory
         self.health = 100
+        self.max_health = self.health
 
     def introduce_yourself(self):
         print(

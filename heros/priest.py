@@ -1,4 +1,5 @@
-﻿from heros.hero import Hero
+﻿from abilities.stat_boost import StatBoost
+from heros.hero import Hero
 from abilities.heal import Heal
 
 
@@ -7,6 +8,11 @@ class Priest(Hero):
         super().__init__(name, stats, backstory)
 
         self.heal_spell = Heal()
+        self.stat_boost_spell = StatBoost()
+
+    def round_tick(self):
+        self.heal_spell.round_tick()
+        self.stat_boost_spell.round_tick()
 
     def calculate_attack_damage(self):
         attack = 1.0 * self.stats.int
@@ -37,6 +43,10 @@ class Priest(Hero):
             self.health += self.heal_spell.use(self.stats)
 
             print(f"healing myself from {old_health:.2f} to {self.health:.2f}")
+            return 0  # exposed
+
+        if self.stat_boost_spell.is_ready():
+            self.stat_boost_spell.use(self.stats)
             return 0  # exposed
 
         return self.calculate_basic_defense()

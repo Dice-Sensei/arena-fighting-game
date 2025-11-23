@@ -1,5 +1,7 @@
 ﻿from time import sleep
 
+import color_helper
+
 
 class Arena:
     def __init__(self):
@@ -80,7 +82,7 @@ class Arena:
 
         Arena.perform_one_sided_attack(attacker, defender)
         if defender.is_dead():
-            print(f"{defender.name} is dead")
+            print(f"{defender.name} is {color_helper.red("dead")}")
             return True
         return False
 
@@ -88,7 +90,7 @@ class Arena:
         fighting_round = 1
 
         while True:
-            print(f"Fighting round {fighting_round} starts")
+            print(f"Fighting round {color_helper.yellow(fighting_round)} starts")
 
             self.hero1.round_tick()
             self.hero2.round_tick()
@@ -113,5 +115,6 @@ class Arena:
             print()  # empty row for readability
             sleep(0.8)
 
-        print(f"Fight ended in {fighting_round} rounds!")
-        print(f"Winner is {self.winner.name}!!! Congratulation!")
+        print()
+        print(f"Fight ended in {color_helper.yellow(fighting_round)} rounds!")
+        print(f"Winner is {color_helper.green(self.winner.name)}!!! Congratulation!")

@@ -1,3 +1,6 @@
+import color_helper
+
+
 class Stats:
     def __init__(self, str, dex, end, int, cha):
         self.str = str
@@ -7,8 +10,8 @@ class Stats:
         self.cha = cha
 
     def print_values(self):
-        print(f"Strength: {self.str}")
-        print(f"Dexterity: {self.dex}")
-        print(f"Endurance: {self.end}")
-        print(f"Intelligence: {self.int}")
-        print(f"Charisma: {self.cha}")
+        print(f"Strength: {color_helper.red(self.str)}")
+        print(f"Dexterity: {color_helper.green(self.dex)}")
+        print(f"Endurance: {color_helper.yellow(self.end)}")
+        print(f"Intelligence: {color_helper.blue(self.int)}")
+        print(f"Charisma: {color_helper.pink(self.cha)}")
